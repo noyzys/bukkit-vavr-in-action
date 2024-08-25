@@ -3,12 +3,11 @@ package dev.noyzys.bukkit.vavr.collection;
 import dev.noyzys.bukkit.vavr.BukkitVavrPlugin;
 import dev.noyzys.bukkit.vavr.IBukkitCommandExecutor;
 import io.vavr.collection.LinearSeq;
+import io.vavr.collection.List;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
-
-import java.util.List;
 
 /* LinearSequence :: immutable, linear sequences */
 public final class VavrLinearSequence implements IBukkitCommandExecutor {
@@ -22,7 +21,7 @@ public final class VavrLinearSequence implements IBukkitCommandExecutor {
     @Override
     public void execute(final Player player, final String[] args) {
 
-        final List<ItemStack> itemStacks = List.of(
+        final LinearSeq<ItemStack> itemStacks = List.of(
                 new ItemStack(Material.STONE), new ItemStack(Material.DIRT),
                 new ItemStack(Material.BEDROCK));
 
