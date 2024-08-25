@@ -8,6 +8,7 @@ import io.vavr.control.Try;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
+/* IndexedSequence :: immutable, indexed sequences */
 public final class VavrIndexedSequence implements IBukkitCommandExecutor {
 
     private final BukkitVavrPlugin vavrPlugin;
