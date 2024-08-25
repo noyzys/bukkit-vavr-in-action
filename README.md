@@ -4,13 +4,14 @@
 * [vavr.git](https://github.com/vavr-io/vavr)
 * [vavr.docs](https://www.javadoc.io/doc/io.vavr/vavr)
 
+
 # Main fp concepts to know during the introduction:
-* [architecture](https://github.com/noyzys/bukkit-vavr-in-action/tree/main/src/main/java/dev/noyzys/bukkit/vavr)Architecture conveys habits of functional code based on bukkit software.
+* [architecture](https://github.com/noyzys/bukkit-vavr-in-action/tree/main/src/main/java/dev/noyzys/bukkit/vavr) Architecture conveys habits of functional code based on bukkit software.
 
 # Functional programming (FP) 
 * was introduced  into Java in Java 8. 
 * Additional Functional Programming Enhancements were introduced in Java 9 until today is developed
-# Functional Programming is an essential skill for Java Programmers today.
+** Functional Programming is an essential skill for Java Programmers today.
 
 # Immutability
 * An immutable class is simply a class whose instances cannot be modified. 
