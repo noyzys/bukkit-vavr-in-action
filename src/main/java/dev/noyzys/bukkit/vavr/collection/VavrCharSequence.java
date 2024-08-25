@@ -22,6 +22,7 @@ public final class VavrCharSequence implements IBukkitCommandExecutor {
     }
 
     /**
+     * Example usage of {@link CharSeq},
      * Creates a progressbar based on the current progress, maximum value,
      * symbol to represent progress, and the colors for both incomplete and
      * complete parts of the progress.

@@ -12,7 +12,7 @@ public final class BukkitVavrPlugin extends JavaPlugin {
         // register command logic
         final List<IBukkitCommandExecutor> commands = List.of(
                 new VavrCharSequence(),
-                new VavrIndexedSequence()
+                new VavrIndexedSequence(this)
         );
 
         commands.forEach(command -> getCommand(command.getName()).setExecutor(command));
