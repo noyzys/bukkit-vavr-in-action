@@ -7,6 +7,7 @@
 
 # Main fp concepts to know during the introduction:
 * [architecture](https://github.com/noyzys/bukkit-vavr-in-action/tree/main/src/main/java/dev/noyzys/bukkit/vavr) conveys habits of functional code based on bukkit software.
+* I recommend the book version FP in Java
 
 # Functional programming (FP) 
 * was introduced  into Java in Java 8. 

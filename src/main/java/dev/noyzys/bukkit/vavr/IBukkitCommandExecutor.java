@@ -6,7 +6,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-interface IBukkitCommandExecutor extends CommandExecutor {
+public interface IBukkitCommandExecutor extends CommandExecutor {
 
     @Override
     default boolean onCommand(CommandSender sender, Command command, String arg, String[] args) {
@@ -22,4 +22,6 @@ interface IBukkitCommandExecutor extends CommandExecutor {
     }
 
     void execute(final Player player, final String[] args);
+
+    String getName();
 }
