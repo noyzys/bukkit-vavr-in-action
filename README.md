@@ -80,6 +80,7 @@
 # SCALA:
 * [scala.lg](https://github.com/scala)
 
+**If I mutilate the language somewhere - I apologize based on my experience and I am not a programmer by day...**
 **I skip many impl collections from the io.vavr.collection package because the implementation is similar is immutable**
 # Impl Event subscribe, CommandExecutor:
 * [BukkitCommandExecutor](https://github.com/noyzys/bukkit-vavr-in-action/blob/main/src/main/java/dev/noyzys/bukkit/vavr/IBukkitCommandExecutor.java)
@@ -137,7 +138,8 @@ final class BukkitVavrListener implements Listener {
 ```
 
 **Another repository based on fucked up rx (Reactive Extensions implementation for Java)**
-[reactor.std](https://projectreactor.io/)
-[reactor.core](https://projectreactor.io/docs/core/release/reference/)
-[reactor.git](https://github.com/reactor/reactor-core)
-[reactor.javadoc](https://projectreactor.io/docs/core/release/api/)
+* [reactor.std](https://projectreactor.io/)
+* [reactor.core](https://projectreactor.io/docs/core/release/reference/)
+* [reactor.git](https://github.com/reactor/reactor-core)
+* [reactor.javadoc](https://projectreactor.io/docs/core/release/api/)
+**vavr + reactor = ?*
