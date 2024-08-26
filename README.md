@@ -79,3 +79,65 @@
 
 # SCALA:
 * [scala.lg](https://github.com/scala)
+
+**I skip many impl collections from the io.vavr.collection package because the implementation is similar is immutable**
+# Impl Event subscribe, CommandExecutor:
+* [BukkitCommandExecutor](https://github.com/noyzys/bukkit-vavr-in-action/blob/main/src/main/java/dev/noyzys/bukkit/vavr/IBukkitCommandExecutor.java)
+```java
+final class CustomCommand implements IBukkitCommandExecutor {
+    
+  @Override
+  public void execute(final Player player, final String[] args) {
+   // impl
+  }
+
+  @Override
+  public String getName() {
+   return "commandName";
+  }
+ }
+```
+
+* [Register Commands](https://github.com/noyzys/bukkit-vavr-in-action/blob/main/src/main/java/dev/noyzys/bukkit/vavr/BukkitVavrPlugin.java#L57)
+```java
+    final List<IBukkitCommandExecutor> commands = List.of(
+            new CustomCommand(),
+            new OtherCustomCommand(this),
+            new HujsonCommand()
+        );
+
+        commands.forEach(command -> Option.of(getCommand(command.getName()))
+                        .peek(cmd -> cmd.setExecutor(command)));
+```
+
+* [BukkitListener](https://github.com/noyzys/bukkit-vavr-in-action/blob/main/src/main/java/dev/noyzys/bukkit/vavr/BukkitVavrListener.java)
+```java
+final class BukkitVavrListener implements Listener {
+
+    @EventInvoker(PlayerJoinEvent.class)
+    void onPlayerJoin(final PlayerJoinEvent event) {
+        final Player player = event.getPlayer();
+        event.setJoinMessage(">> " + player.getName());
+    }
+}
+```
+
+* [Register Listeners with handling](https://github.com/noyzys/bukkit-vavr-in-action/blob/main/src/main/java/dev/noyzys/bukkit/vavr/BukkitVavrPlugin.java#L61)
+```java
+    final EventListenerRegistrar listenerRegistrar = new EventListenerRegistrar(this);
+        Try.run(() -> listenerRegistrar.subscribeToEvents(this, new CustomListener()))
+            .onFailure(ex -> getLogger().severe("> Could not register events: " + ex.getMessage()));
+
+```
+
+* Call Bukkit Event Handler
+```java
+    final EventListenerRegistrar listenerRegistrar = new EventListenerRegistrar(this);
+    listenerRegistrar.callEvent(new CustomEvetHandler());
+```
+
+**Another repository based on fucked up rx (Reactive Extensions implementation for Java)**
+[reactor.std](https://projectreactor.io/)
+[reactor.core](https://projectreactor.io/docs/core/release/reference/)
+[reactor.git](https://github.com/reactor/reactor-core)
+[reactor.javadoc](https://projectreactor.io/docs/core/release/api/)
