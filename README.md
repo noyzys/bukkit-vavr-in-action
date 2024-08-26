@@ -13,7 +13,8 @@
 # Functional programming (FP) 
 * was introduced  into Java in Java 8. 
 * Additional Functional Programming Enhancements were introduced in Java 9 until today is developed
-**Functional Programming is an essential skill for Java Programmers today.**
+* Why **avoid** **java.util?** it's a mistake by java developers
+* **Functional Programming is an essential skill for Java Programmers today.**
 
 # Immutability
 * An immutable class is simply a class whose instances cannot be modified. 
