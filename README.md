@@ -1,5 +1,6 @@
 ### BUKKIT VAVR PLAYGROUND :: FUNCTIONAL PROGRAMMING IN JVM PLATFORM
-* this is a personal-use repository, where i want to outline the need of the vavr.io framework in bukkit/spigot software development.
+* this is a personal-use repository, where i want to outline the need of the vavr.io framework in bukkit/spigot software development,
+* delegated functions are not full-featured vavr learns from high-level abstraction implementations, and that's where it just leaks.
 * [vavr.official](https://www.vavr.io/)
 * [vavr.git](https://github.com/vavr-io/vavr)
 * [vavr.docs](https://www.javadoc.io/doc/io.vavr/vavr)
