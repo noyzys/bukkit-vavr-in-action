@@ -23,7 +23,7 @@ dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT")
 
     // fp stuff
-    implementation("io.vavr:vavr:0.10.7")
+    implementation("io.vavr:vavr:0.10.6")
 }
 
 tasks.test {
